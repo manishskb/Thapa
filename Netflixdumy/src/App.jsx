@@ -1,6 +1,8 @@
 import React from 'react';
-import Card from './Card';
-import sdata from './Sdata';
+import Amazon from './Amazon';
+import Netflix from './Netflix';
+// import Card from './Card';
+// import sdata from './Sdata';
 
 
 // function ncard(val){
@@ -14,22 +16,16 @@ import sdata from './Sdata';
 //     )
 // }
 
+let supS = 'Netflix';
+
 const App = ()=>{
     return(
 
     <>
         <h1 className='heading_style'> List of Top 5 NETFLIX Series All Over World!</h1>
-        {sdata.map((val) =>{
-            return(
-                <Card
-                    key={val.id}
-                    imgsrc={val.imgsrc}
-                    link={val.link}
-                    sname={val.sname}
-                    title={val.title}
-                />
-            )
-        })}
+        
+        {(supS === 'Netflix')?<Netflix/>:<Amazon/>}
+        
         
         {/* <Card
         imgsrc={sdata[0].imgsrc}
